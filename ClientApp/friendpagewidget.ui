@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>FriendPageWidget</class>
+ <widget class="QWidget" name="FriendPageWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>331</width>
+    <height>671</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FriendPageWidget</string>
+  </property>
+  <widget class="Line" name="line">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>60</y>
+     <width>331</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>10</y>
+     <width>101</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QLabel" name="labelAvatar">
+      <property name="text">
+       <string>头像</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QLabel" name="labelName">
+        <property name="text">
+         <string>昵称：</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="labelSign">
+        <property name="text">
+         <string>签名：</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>70</y>
+     <width>331</width>
+     <height>601</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>1</number>
+   </property>
+   <widget class="QWidget" name="tabFriendList">
+    <attribute name="title">
+     <string>好友列表</string>
+    </attribute>
+    <widget class="QListWidget" name="listWidgetFriend">
+     <property name="geometry">
+      <rect>
+       <x>-2</x>
+       <y>30</y>
+       <width>333</width>
+       <height>545</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAddGroup">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>0</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>添加分组</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAddFriend">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>0</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>添加好友</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tabChatGroupList">
+    <attribute name="title">
+     <string>群聊列表</string>
+    </attribute>
+    <widget class="QListWidget" name="listWidgetChatGroup">
+     <property name="geometry">
+      <rect>
+       <x>-2</x>
+       <y>30</y>
+       <width>333</width>
+       <height>545</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonAddChatGroup">
+     <property name="geometry">
+      <rect>
+       <x>240</x>
+       <y>0</y>
+       <width>81</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>添加群聊</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
