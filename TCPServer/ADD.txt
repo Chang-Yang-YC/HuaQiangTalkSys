@@ -1,0 +1,27 @@
+修改：
+发送内容的时候需要增加字段：
+修改为
+STEXT##发送者ID##对方ID##DATE##Time##内容
+
+第二版：
+你登录的时候会接收到一个BackWord
+
+inFormationText(反馈给你是否登陆成功)##string##string....
+string的内容是：发送者ID$$对方ID$$DATE$$Time$$内容
+
+informationText会有DONE、ERR两种，DONE的话进入一个分支，后面会有undo的消息语句，这里需要你把每一个string都分开，然后存入本地的消息数据库中，然后显示在对话框中即可
+ERR进入另一个分支，分为NOID、NOPW，具体参考代码；
+
+接口：
+1.登录的时候：传给服务器：Str = LOG##账号##密码
+   服务器返回情况见第二版；
+2.登录窗口与好友窗口（mainWindow），如果登陆成功的话跳转即可。
+3.打开好友窗口后信息加载问题：（从本地好友数据库中）读取数据，
+ADDFRIEND##目标好友信息
+返回值：ERR  未搜到；
+              OK   存在
+添加群聊：
+           ADDGP##群ID	群ID是int型的
+返回值：
+
+群聊；先用TCP发给服务器，然后服务器发给组中的成员；（select出来所有的群成员，然后发送...）

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TcpServerMainWindow</class>
+ <widget class="QMainWindow" name="TcpServerMainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>TcpServerMainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QTextBrowser" name="textBrowserShow"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubarSwitch">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuService">
+    <property name="title">
+     <string>进程与服务</string>
+    </property>
+    <addaction name="actionshowServiceList"/>
+   </widget>
+   <widget class="QMenu" name="menuUserList">
+    <property name="title">
+     <string>用户列表</string>
+    </property>
+    <addaction name="actionshowUserList"/>
+   </widget>
+   <widget class="QMenu" name="menuGroupList">
+    <property name="title">
+     <string>群组列表</string>
+    </property>
+    <addaction name="actionshowGroupList"/>
+   </widget>
+   <widget class="QMenu" name="menuUndoList">
+    <property name="title">
+     <string>未完成服务列表</string>
+    </property>
+    <addaction name="actionshowUndoList"/>
+   </widget>
+   <addaction name="menuService"/>
+   <addaction name="menuUserList"/>
+   <addaction name="menuGroupList"/>
+   <addaction name="menuUndoList"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionshowUserList">
+   <property name="text">
+    <string>显示列表</string>
+   </property>
+  </action>
+  <action name="actionshowGroupList">
+   <property name="text">
+    <string>显示列表</string>
+   </property>
+  </action>
+  <action name="actionshowUndoList">
+   <property name="text">
+    <string>显示列表</string>
+   </property>
+  </action>
+  <action name="actionshowServiceList">
+   <property name="text">
+    <string>显示列表</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
